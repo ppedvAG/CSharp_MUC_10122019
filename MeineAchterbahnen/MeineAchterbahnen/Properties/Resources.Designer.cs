@@ -63,6 +63,26 @@ namespace MeineAchterbahnen.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap more_exports {
+            get {
+                object obj = ResourceManager.GetObject("more_exports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap more_imports {
+            get {
+                object obj = ResourceManager.GetObject("more_imports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap santa {
             get {
                 object obj = ResourceManager.GetObject("santa", resourceCulture);
@@ -86,6 +106,26 @@ namespace MeineAchterbahnen.Properties {
         internal static System.Drawing.Bitmap text_imports {
             get {
                 object obj = ResourceManager.GetObject("text_imports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xml_exports {
+            get {
+                object obj = ResourceManager.GetObject("xml_exports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xml_imports {
+            get {
+                object obj = ResourceManager.GetObject("xml_imports", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
