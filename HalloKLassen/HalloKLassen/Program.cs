@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HalloKlassen
 {
@@ -10,9 +6,13 @@ namespace HalloKlassen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("*** Hallo Klassen ***");
+            System.Console.WriteLine("*** Hallo Klassen ***");
 
-            Achterbahn meineAchterbahn; //deklaration
+#if DEBUG
+            Console.WriteLine("DEBUGGGGGG");
+#endif 
+
+            HalloKlassen.Achterbahn meineAchterbahn; //deklaration
             meineAchterbahn = new Achterbahn("Silverstar"); //instanzierung
             //meineAchterbahn.Name = "Silverstar";
             meineAchterbahn.Hersteller = "MackRide";

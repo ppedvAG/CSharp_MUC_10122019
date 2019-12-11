@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HalloKlassen
 {
-    class Achterbahn
+    public class Achterbahn
     {
         private string name; //datenfeld
         private int höchstgeschwindigkeit;
