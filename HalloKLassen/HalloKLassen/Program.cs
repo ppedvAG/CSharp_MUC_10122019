@@ -13,10 +13,11 @@ namespace HalloKlassen
             Console.WriteLine("*** Hallo Klassen ***");
 
             Achterbahn meineAchterbahn; //deklaration
-            meineAchterbahn = new Achterbahn(); //instanzierung
-            meineAchterbahn.Name = "Silverstar";
+            meineAchterbahn = new Achterbahn("Silverstar"); //instanzierung
+            //meineAchterbahn.Name = "Silverstar";
             meineAchterbahn.Hersteller = "MackRide";
             meineAchterbahn.Modell = "LSM Launch coster";
+            meineAchterbahn.Höchstgeschwindigkeit = -121;
             meineAchterbahn.Höchstgeschwindigkeit = 121;
             meineAchterbahn.Höhe = 70;
             meineAchterbahn.Länge = 1.2;
@@ -36,6 +37,9 @@ namespace HalloKlassen
             ZeigeAchterbahn(meineAchterbahn);
             ZeigeAchterbahn(nochEineAchterbahn);
 
+            meineAchterbahn.Einpacken();
+            meineAchterbahn.Auspacken();
+
             Console.WriteLine("Ende");
             Console.ReadLine();
         }
@@ -45,7 +49,7 @@ namespace HalloKlassen
             Console.WriteLine("--------------------------------------");
             Console.WriteLine($"Name: {bahn.Name} Hersteller: {bahn.Hersteller} Modell: {bahn.Modell}");
             Console.WriteLine($"MaxSpeed: {bahn.Höchstgeschwindigkeit} kmn/h");
-            Console.WriteLine($"Höhe: {bahn.Höhe:0.00}m Länge: {bahn.Länge}m");
+            Console.WriteLine($"Höhe: {bahn.Höhe:0.00}m Länge: {bahn.Länge}km ({bahn.LängeInFuß}ft)");
             //Console.WriteLine("Höhe: {0}m Länge: {1}m", bahn.Höhe, bahn.Länge); //OLD STyle
             Console.WriteLine($"Sitzplätze: {bahn.Sitzplätze}");
             Console.WriteLine($"Baujahr: {bahn.Baujahr:d}");
