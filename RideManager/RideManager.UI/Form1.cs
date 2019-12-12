@@ -1,6 +1,8 @@
 ﻿using RideManager.Model;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace RideManager.UI
@@ -13,6 +15,10 @@ namespace RideManager.UI
         {
             InitializeComponent();
             dataGridView1.DataSource = liste;
+
+            Trace.AutoFlush = true;
+            Trace.Listeners.Add(new EventLogTraceListener("Application"));
+            Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,7 +36,7 @@ namespace RideManager.UI
         {
             var acht = new Achterbahn();
             acht.Name = "8terbahn";
-            acht.MaxSpeed = 437634;
+            acht.MaxSpeed = 500;
 
             liste.Add(acht);
         }
@@ -43,9 +49,21 @@ namespace RideManager.UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var scooter = new Autoscooter() { Name = "Hyper hyper", WattDerSoundanlage = 1000 };
+            try
+            {
+                var scooter = new Autoscooter()
+                {
+                    Name = "Hyper hyper",
+                    WattDerSoundanlage = 500
+                };
 
-            liste.Add(scooter);
+                liste.Add(scooter);
+
+            }
+            catch (AutoScooterToLessPowerException ex)
+            {
+                MessageBox.Show($"{ex.Message} es sollten {ex.MinPower} sein");
+            }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -72,6 +90,33 @@ namespace RideManager.UI
             if (selectedDings is Fahrgeschäft fg)
             {
                 MessageBox.Show($"Preis {fg.GetTicketPreis(DateTime.Now):c}");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int lala = 7 / int.Parse("0");
+                StreamReader sr = new StreamReader("l:\\owregbgewüwegwe.ewgiewbf");
+
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                MessageBox.Show("Nix Folder!");
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show("Nix Datei!");
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Da ist was mit der IO Faul!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Fehler :-( {ex.Message}");
+                Trace.WriteLine($"ERROR: {ex.Message}");
             }
         }
     }
