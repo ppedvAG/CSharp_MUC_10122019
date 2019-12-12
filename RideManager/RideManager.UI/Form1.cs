@@ -17,13 +17,13 @@ namespace RideManager.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Fahrgeschäft fg = new Fahrgeschäft()
-            {
-                Name = "NEU",
-                Baujahr = DateTime.Now
-            };
+            //    Fahrgeschäft fg = new Fahrgeschäft()
+            //    {
+            //        Name = "NEU",
+            //        Baujahr = DateTime.Now
+            //    };
 
-            liste.Add(fg);
+            //  liste.Add(fg);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,6 +53,7 @@ namespace RideManager.UI
             object selectedDings = dataGridView1.CurrentRow.DataBoundItem;
 
 
+
             if (selectedDings is Achterbahn) //typ prüfung
             {
                 Achterbahn achter = (Achterbahn)selectedDings; //casting
@@ -66,6 +67,11 @@ namespace RideManager.UI
             if (selectedDings is Autoscooter scooter) //pattern matching
             {
                 MessageBox.Show($"Scooooter mit {scooter.WattDerSoundanlage}W");
+            }
+
+            if (selectedDings is Fahrgeschäft fg)
+            {
+                MessageBox.Show($"Preis {fg.GetTicketPreis(DateTime.Now):c}");
             }
         }
     }

@@ -2,11 +2,18 @@
 
 namespace RideManager.Model
 {
-    public class Fahrgeschäft
+    public abstract class Fahrgeschäft
     {
         public string Hersteller { get; set; }
         public string Modell { get; set; }
         public string Name { get; set; }
         public DateTime Baujahr { get; set; }
+
+        public abstract decimal Preis { get; }
+
+        public virtual decimal GetTicketPreis(DateTime alter)
+        {
+            return 9999;
+        }
     }
 }
