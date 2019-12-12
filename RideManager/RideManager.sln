@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideManager.Model", "RideManager.Model\RideManager.Model.csproj", "{AEED3378-FC56-4422-A98C-6792D157288F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RideManager.UI", "RideManager.UI\RideManager.UI.csproj", "{9E347BC1-F8F7-4A40-BAA5-8E45F28025BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEED3378-FC56-4422-A98C-6792D157288F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEED3378-FC56-4422-A98C-6792D157288F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEED3378-FC56-4422-A98C-6792D157288F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEED3378-FC56-4422-A98C-6792D157288F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E347BC1-F8F7-4A40-BAA5-8E45F28025BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E347BC1-F8F7-4A40-BAA5-8E45F28025BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E347BC1-F8F7-4A40-BAA5-8E45F28025BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E347BC1-F8F7-4A40-BAA5-8E45F28025BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B8FFC88-E58E-4C19-82A1-74AA1B4E99DE}
+	EndGlobalSection
+EndGlobal
