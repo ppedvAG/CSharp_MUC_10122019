@@ -20,14 +20,14 @@ namespace DVDScreensaver
         int nachOben = 3;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (button1.Right >= ClientRectangle.Right || button1.Left <= 0)
-                nachLinks *= -1;
+           if (myButton1.Right >= ClientRectangle.Right || myButton1.Left <= 0)
+               nachLinks *= -1;
 
-            if (button1.Bottom >= ClientRectangle.Bottom || button1.Top <= 0)
-                nachOben *= -1;
+           if (myButton1.Bottom >= ClientRectangle.Bottom || myButton1.Top <= 0)
+               nachOben *= -1;
 
-            button1.Left += nachLinks;
-            button1.Top += nachOben;
+            myButton1.Left += nachLinks;
+            myButton1.Top += nachOben;
 
         }
     }
