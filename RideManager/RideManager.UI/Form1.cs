@@ -70,6 +70,23 @@ namespace RideManager.UI
         {
             object selectedDings = dataGridView1.CurrentRow.DataBoundItem;
 
+            if (selectedDings is IAlter alter)
+            {
+                if (MessageBox.Show($"Bist du schon {alter.MindestAlter}?",
+                                    "Altersprüfung",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    MessageBox.Show("Ok");
+                }
+                else
+                {
+                    MessageBox.Show("Schade!");
+                    return;
+                }
+
+
+            }
 
 
             if (selectedDings is Achterbahn) //typ prüfung

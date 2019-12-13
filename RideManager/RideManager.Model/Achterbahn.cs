@@ -2,7 +2,7 @@
 
 namespace RideManager.Model
 {
-    public class Achterbahn : Fahrgeschäft
+    public class Achterbahn : Fahrgeschäft, IAlter
     {
         public double Länge { get; set; }
         public int MaxSpeed { get; set; }
@@ -12,7 +12,15 @@ namespace RideManager.Model
             get { return 5; }
         }
 
-        public override  decimal GetTicketPreis(DateTime alter)
+        //public int MindestAlter => 18;
+        public int MindestAlter { get { return 18; } }
+
+        public bool AlterPrüfen(DateTime alter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override decimal GetTicketPreis(DateTime alter)
         {
             return Preis + 3;
         }
