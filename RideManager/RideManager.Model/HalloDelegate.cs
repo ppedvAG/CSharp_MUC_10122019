@@ -16,8 +16,14 @@ namespace RideManager.Model
         public HalloDelegate()
         {
             EinfacheDelegate meineDelegate = EinfacheMethode;
+            Action meinDeleAlsAction = EinfacheMethode;
+
             DelegateMitParameter meinDeleMitPara = MethodeMitPara;
+            Action<string> meinDeletMitParaAlsAction = MethodeMitPara;
+
             CalcDelegate calc = Minus;
+            Func<int, int, long> calcAlsFunc= Sum;
+
             long result = calc.Invoke(3, 4);
         }
 
