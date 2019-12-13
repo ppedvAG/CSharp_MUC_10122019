@@ -17,7 +17,10 @@ namespace RideManager.Model
 
         public bool AlterPrüfen(DateTime alter)
         {
-            throw new NotImplementedException();
+            int age = DateTime.Now.Year - alter.Year;
+            if (alter > DateTime.Now.AddYears(age * -1)) age--;
+
+            return age >= MindestAlter;
         }
 
         public override decimal GetTicketPreis(DateTime alter)

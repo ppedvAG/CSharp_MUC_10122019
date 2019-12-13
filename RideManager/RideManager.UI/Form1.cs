@@ -72,19 +72,30 @@ namespace RideManager.UI
 
             if (selectedDings is IAlter alter)
             {
-                if (MessageBox.Show($"Bist du schon {alter.MindestAlter}?",
-                                    "Altersprüfung",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question) == DialogResult.Yes)
+                AlterDialog dlg = new AlterDialog();
+                if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("Ok");
+                    if (alter.AlterPrüfen(dlg.SelectedDate))
+                    {
+                        MessageBox.Show("Viel Spaß");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Schade");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Schade!");
-                    return;
-                }
-
+                // if (MessageBox.Show($"Bist du schon {alter.MindestAlter}?",
+                //                     "Altersprüfung",
+                //                     MessageBoxButtons.YesNo,
+                //                     MessageBoxIcon.Question) == DialogResult.Yes)
+                // {
+                //     MessageBox.Show("Ok");
+                // }
+                // else
+                // {
+                //     MessageBox.Show("Schade!");
+                //     return;
+                // }
 
             }
 
