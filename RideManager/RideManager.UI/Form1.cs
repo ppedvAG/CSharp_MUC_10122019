@@ -19,6 +19,25 @@ namespace RideManager.UI
             Trace.AutoFlush = true;
             Trace.Listeners.Add(new EventLogTraceListener("Application"));
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));
+
+            dataGridView1.MouseMove += Form1_MouseMove;
+
+            tripleClickButton1.TripleClick += TripleClickButton1_TripleClick;
+
+        }
+
+        private void TripleClickButton1_TripleClick(int clickCount)
+        {
+            MessageBox.Show($"TripleClick: {clickCount}");
+        }
+
+        int count = 0;
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Text = $"Move {count++}";
+            if (count > 500)
+                dataGridView1.MouseMove -= Form1_MouseMove;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

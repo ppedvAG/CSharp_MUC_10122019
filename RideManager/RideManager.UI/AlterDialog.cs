@@ -33,5 +33,7 @@ namespace RideManager.UI
             this.DialogResult = DialogResult.Abort;
             this.Close();
         }
+
+
     }
 }
