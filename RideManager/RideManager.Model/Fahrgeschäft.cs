@@ -9,6 +9,8 @@ namespace RideManager.Model
         public string Name { get; set; }
         public DateTime Baujahr { get; set; }
 
+        protected int Geheim { get; set; }
+
         public abstract decimal Preis { get; }
 
         public virtual decimal GetTicketPreis(DateTime alter)
